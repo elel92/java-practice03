@@ -23,13 +23,13 @@ public class CalcApp {
 			}
 			
 			if(tokens[1].equals("+")) {
-				System.out.println(">> " + new Add(tokens[0], tokens[2]).ans);
+				System.out.println(">> " + new Add(tokens[0], tokens[2]).calculate());
 			} else if(tokens[1].equals("-")) {
-				System.out.println(">> " + new Sub(tokens[0], tokens[2]).ans);
+				System.out.println(">> " + new Sub(tokens[0], tokens[2]).calculate());
 			} else if(tokens[1].equals("*")) {
-				System.out.println(">> " + new Mul(tokens[0], tokens[2]).ans);
+				System.out.println(">> " + new Mul(tokens[0], tokens[2]).calculate());
 			} else if(tokens[1].equals("/")) {
-				System.out.println(">> " + new Div(tokens[0], tokens[2]).ans);
+				System.out.println(">> " + new Div(tokens[0], tokens[2]).calculate());
 			}
 		}
 		
@@ -43,6 +43,10 @@ class Add {
 	Add(String a, String b) {
 		ans = Integer.parseInt(a) + Integer.parseInt(b);
 	}
+	
+	public int calculate() {
+		return ans;
+	}
 }
 
 class Sub {
@@ -50,6 +54,10 @@ class Sub {
 	
 	Sub(String a, String b) {
 		ans = Integer.parseInt(a) - Integer.parseInt(b);
+	}
+	
+	public int calculate() {
+		return ans;
 	}
 }
 
@@ -59,6 +67,10 @@ class Mul {
 	Mul(String a, String b) {
 		ans = Integer.parseInt(a) * Integer.parseInt(b);
 	}
+	
+	public int calculate() {
+		return ans;
+	}
 }
 
 class Div {
@@ -66,5 +78,9 @@ class Div {
 	
 	Div(String a, String b) {
 		ans = Integer.parseInt(a) / Integer.parseInt(b);;
+	}
+	
+	public double calculate() {
+		return ans;
 	}
 }
