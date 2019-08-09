@@ -77,7 +77,7 @@ class Div {
 	double ans;
 	
 	Div(String a, String b) {
-		ans = Integer.parseInt(a) / Integer.parseInt(b);;
+		ans = Integer.parseInt(a) / Integer.parseInt(b);
 	}
 	
 	public double calculate() {
